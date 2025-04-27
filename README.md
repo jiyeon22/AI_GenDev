@@ -70,5 +70,34 @@ K-최근접 이웃 알고리즘(K-Nearest Neighbors)을 다양한 데이터셋�
 특히 의사결정트리 시각화를 통해 **모델이 어떤 기준으로 분기하고 판단하는지 직접 확인**할 수 있었고,  
 **상황에 따라 어떤 모델을 선택해야 할지 고민해보는 시간**이 되었습니다.
 
+# 📘 4. 심장병 예측 실습 - 다양한 모델 비교 및 앙상블 적용
+심장병(Heart Disease) 데이터셋을 기반으로,
+다양한 분류 모델(Logistic Regression, SVC, Random Forest)을 활용하여 심장병 여부를 예측하고,
+앙상블 기법(Voting Classifier)을 적용하여 성능을 비교 분석한 실습 자료입니다.
 
+## 📁 파일
+📄 [`Heart_Disease_Scenario_Assignment.ipynb`](./Heart_Disease_Scenario_Assignment.ipynb)
+→ 심장병 데이터 전처리, 다양한 분류 모델 적용, 앙상블 모델 실습 내용 포함
+
+## 🧪 실습 주제
+- 심장병(Heart Disease) 여부를 타겟으로 한 이진 분류(Binary Classification) 문제
+- Logistic Regression, Support Vector Classifier(SVC), Random Forest 적용
+- Hard Voting, Soft Voting 앙상블 기법 실습
+- 각 모델의 성능을 정확도(Accuracy), 정밀도(Precision), 재현율(Recall), F1-score로 비교
+- 샘플건에 대해 개별 모델의 예측 결과를 비교
+
+## 주요 전처리 내용
+- TotalCharges 컬럼의 공백 제거 및 수치형 변환
+- Churn (or 심장병 예측시 target 변수) 이진화 (Yes → 1, No → 0)
+- 필요 없는 식별자 컬럼(customerID) 제거
+- 범주형 변수 → 원-핫 인코딩(pd.get_dummies)
+- train_test_split()으로 학습/테스트 데이터 분리
+
+## 학습 소감
+이번 실습을 통해 환자 진단처럼 신중함이 필요한 문제에서는 단순히 정확도만 보는 것을 넘어,
+상황에 맞는 모델 선택 기준을 고민하는 경험을 할 수 있었습니다.
+특히 질병이 있는 환자를 놓치는 상황(False Negative)은 심각한 결과를 초래할 수 있기 때문에, 이 경우에는 재현율(Recall) 이 높은 모델을 선택하는 것이 중요하다는 점을 배웠습니다.
+반대로, 질병이 없는 환자에게 고비용 치료나 불필요한 처치를 적용하는 것을 막기 위해서는 정밀도(Precision) 가 높은 모델을 선택해야 한다는 점도 함께 이해할 수 있었습니다.
+또한, 단일 모델만 사용하는 것이 아니라 여러 모델의 강점을 조합한 앙상블 모델을 실습하면서,다양한 모델을 융합해 성능을 높이는 방법까지 경험해볼 수 있었습니다.
+이번 실습을 통해 실제 문제 상황에서는 단일 지표나 모델에 의존하지 않고, 다양한 접근법을 유연하게 적용할 수 있어야 한다는 점을 느낄 수 있었던 시간이었습니다.
 
