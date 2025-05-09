@@ -150,7 +150,7 @@ MNIST 손글씨 숫자 데이터셋 분류 문제를 다루는 실습입니다.
 순전파, 역전파, 활성화 함수, 가중치 및 편향의 행렬 연산을 numpy만 사용하여 구현하였고, 학습 손실 추이를 시각화하여 딥러닝의 기초 학습 과정을 체험할 수 있도록 구성된 실습 자료입니다.
 
 ## 📁 파일
-📄 [`drone_3d_multivariable_nn.ipynb`](./drone_3d_multivariable_nn.ipynb)drone_landing_prediction.ipynb
+📄 [`drone_3d_multivariable_nn.ipynb`](./drone_3d_multivariable_nn.ipynb)
 → 위도/경도/고도 입력을 받아 착륙 좌표를 예측하는 MLP 신경망 구현 실습 내용을 포함하고 있습니다.
 
 ## 🧪 실습 주제
@@ -164,6 +164,26 @@ MNIST 손글씨 숫자 데이터셋 분류 문제를 다루는 실습입니다.
 
 딥러닝 모델이 어떻게 입력을 처리하고 오차를 줄여나가는지를 처음부터 직접 구현해보며 이해할 수 있었습니다.
 수식을 코드로 옮기는 과정에서 forward와 backward의 흐름을 더 명확하게 이해할 수 있었습니다.
+
+# 📘 8. XOR 문제를 Numpy와 Pytorch로 신경망 구현
+
+XOR 문제를 Numpy와 Pytorch 2가지 버전으로 구현해보는 실습입니다. 
+순전파(forward propagation), 손실 계산(loss), 역전파(backpropagation, 연쇄 법칙 기반), 확률적 경사 하강법(SGD)을 통해 파라미터를 갱신하며, 학습률 변화에 따른 결과도 실험해봅니다.
+
+## 📁 파일
+📄[`20250501_deep_learning_school_admission_exam.ipynb`](./20250501_deep_learning_school_admission_exam.ipynb)
+→ XOR문제를 2층 신경망으로 구현하고 순전파, 역전파 과정을 실습한 내용을 포함하고 있습니다. 
+
+## 🧪 실습 주제
+- forward, loss, backward를 구현해보며 딥러닝 구조 및 원리 이해
+- 학습률에 변화에 따른 모델 성능 비교 실험
+- 옵티마이저 종류 비교 및 개념 정리 (SGD, Momentum, RMSProp, Adam)
+- 파이토치 기초 문법을 익히고, Numpy로 구현한 신경망과 비교
+
+## 📚 학습 소감
+
+오늘은 딥러닝의 핵심 개념 중 하나인 역전파(backpropagation)를 Numpy로 직접 구현해보았다. 저번 실습에서는 이해한 것 같있는데, 지금 다시 보니 또 막히는 그 마법.. def backward(...) 부분에서 특히 어려움을 느꼈는데, 역전파의 전체적인 흐름은 이해했지만, 각 수식이 왜 그런 방식으로 기울기를 계산하는지까지는 명확히 와닿지 않았다. 아직 수학적인 기반이 부족해서 공식의 의미를 온전히 이해하지 못한 것 같다. 이 부분에서 오래 고민하다 보니 다른 계획한 일을 진행하지 못한 것 같아, 다음 실습을 통해 조금씩 감을 잡아가야겠다고 생각했다. 지금은 이해가 완벽하지 않아도 괜찮다. 계속 구현하고 부딪히면서 결국 내 것이 될 거라 믿는다!!!!! keep going ~ 🔥
+
 
 
 
