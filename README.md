@@ -194,7 +194,7 @@ SGD 옵티마이저와 CrossEntropyLoss를 사용해 학습을 수행하였습�
 📄[`20250502_dl_beginner_mission.ipynb`](./20250502_dl_beginner_mission.ipynb)
 → MNIST 데이터 셋을 기반으로 MLP 신경망을 학습 시키고, 학습 손실을 시각화 하는 내용을 담고 있습니다. 
 
-🧪 실습 주제
+## 🧪 실습 주제
 - torchvision.datasets.MNIST를 이용한 학습/테스트 데이터 불러오기
 - transforms.Compose로 이미지 정규화 및 텐서 변환
 - DataLoader를 활용한 배치 구성(batch_size=64)
@@ -206,6 +206,30 @@ SGD 옵티마이저와 CrossEntropyLoss를 사용해 학습을 수행하였습�
 
 ## 📚 학습 소감
 MNIST 숫자 분류기를 구현하면서 pytorch의 전체 흐름을 따라가 봤다. Sequential 을 경험해보니, 파이토치가 얼마나 유연하고 직관적인지 알게 되었다. 구현 도중 view(-1, 28*28)과 같이 이미지를 평탄화하지 않아 생긴 에러를 겪으면서, 딥러닝 학습 흐름에서 데이터 형태(shape)가 얼마나 중요한지 직접 체감할 수 있었다. 이전에 직접 역전파를 구현했을 때도 마찬가지로 shape을 맞추는 게 핵심이었는데, 아직은 텐서 형태를 직관적으로 바라보는 눈이 부족하다는 것도 느꼈다. 현재는 코드를 처음부터 혼자 짜기보다는, 강사님의 설명을 따라치고 구조를 이해하는 단계지만, 하나하나 “왜 이렇게 작성되는 걸까?”를 질문하고, 그 결과를 직접 눈으로 확인해보는 과정을 통해 이해의 깊이가 점점 쌓이고 있다는 느낌을 받는다. 앞으로는 조금씩 더 직접 구현해보는 방식으로 학습을 확장해보고 싶다.
+
+# 📘 10. 맛집 리뷰 분석 
+
+[연세대학교 DSL 자연어처리 실습 자료](https://github.com/DataScience-Lab-Yonsei/24-1_DSL_Modeling_NLP2_Restaurant_Review_Sentiment_Analysis) 를 참고하여 한식 맛집 리뷰 데이터를 기반으로 konlpy의 Okt 형태소 분석기를 활용하여 자주 나오는 키워드를 추출하고 시각화했습니다.
+식당별로 키워드 빈도를 비교하여 각 장소의 특징적인 표현을 분석합니다.
+
+## 🔗 참고 자료
+- [연세대학교 DSL 자연어처리 실습 자료](https://github.com/DataScience-Lab-Yonsei/24-1_DSL_Modeling_NLP2_Restaurant_Review_Sentiment_Analysis)
+
+
+## 📁 파일
+📄['NLP_Mission_GitHub_Dataset.ipynb'](./NLP_Mission_GitHub_Dataset.ipynb)
+→ 형태소 분석부터 시각화 실습 내용을 포함하고 있습니다. 
+
+## 🧪 실습 주제
+- pandas로 데이터셋 로드 및 전처리 
+- konlpy의 Okt를 이용하여 형태소 분석 (명사 추출)
+- 단어 빈도 계산 및 상위 키워드 선정
+- 워드 클라우드 시각화
+- 식당별 키워드 빈도 비교 (막대 그래프)
+
+## 📚 학습 소감
+형태소 분석기를 활용해 리뷰 텍스트에서 키워드를 추출해보는 것은 처음이었지만, 자연어 처리의 기본 흐름을 실습을 통해 직접 경험해볼 수 있어 유익했다.
+단어 빈도를 분석하고 시각화로 표현하는 과정이 흥미로웠다. 앞으로 분석 프로젝트를 진행할 때 이러한 기법들을 적용해볼 수 있다는 생각에 기대가 된다.
 
 
 
